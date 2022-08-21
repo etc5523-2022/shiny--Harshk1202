@@ -10,4 +10,4 @@ The goal of the app is to study and visualize the statistics of MILK PRODUCTION 
 
 From the above two statistical visualizations, one can also find out the relationship between production and consumption of milk products.
 
-The link to the app can be found at [https://ebsmonash.shinyapps.io/etc5523-assessment1-sample/](https://ebsmonash.shinyapps.io/etc5523-assessment1-sample/)
+The link to the app can be found at 
