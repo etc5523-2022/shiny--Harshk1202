@@ -1,23 +1,24 @@
 
 #### Data
 
-This data shows the waiting time between eruptions
-and the duration of the eruption for the Old Faithful
-geyser in Yellowstone National Park, Wyoming, USA.
-The data source is from Azzalini & Bowman (1990) 
-*"A look at some data on the Old Faithful geyser." Applied Statistics*, 39, 357–365.
+This data shows the average production of milk (in pounds) in 
+variousregions and states of United States from 1970 to 2017 
+and consumption of different dairy products from 1975 to 2017 
+(in pounds per person) in United States.
+
+The data source is from **tidytuesday (2019)** 
+
 
 
 #### Purpose
 
 The purpose of the app is to:
 
-1. show how the number of bins in a histogram reveals/hides the bimodality in the data,
-2. show how the different plot choices make certain features of data more striking, and 
-3. interactively estimate the best parameters for the mixture of two normal distributions to the data. 
+1. show the comparison between milk production statistics and dairy products consumption over the period,
+2. show how the use of **plotly** function in plots make visualization of the data much more striking and easy to interpret, and 
+3. help the user to look at the data, understand the data and visualize the data for each year and make a decision accordingly.
 
-The data showed obvious signs of bimodality (both in the marginal and joint distribution). The app used interactive components to see how the choices in plot elements (e.g. number of bins and plot types) effect the visibility of these features. The last part used an interactive approach for a user to decide the model parameters that fit the data. 
-
+The data showed that there was not much increase or decrease in milk production in different regions but there were some specific dairy products which showed increase and decrease in their consumption over the time and the column graph is showing this trend very clearly including values as well.
 #### Creator
 
 Harsh Katiyar (hkat0008@student.monash.edu)

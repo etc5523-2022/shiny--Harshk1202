@@ -12,9 +12,12 @@ mydata2 <- read_csv(url("https://raw.githubusercontent.com/rfordatascience/tidyt
 
 
 ui <- fluidPage(
-  titlePanel("Dairy Production and Consumption Data"),
+  titlePanel("Dairy Production and Consumption Statistics"),
   h3("1. What is the average production of milk per capita in each state of United States from 1970 to 2017"),
   fluidRow(
+        radioButtons("productionRegion",
+                    "Select Region",
+                    choices = unique(mydata1$region)),
         selectInput("production",
                     "Select State:",
                     choices = unique(mydata1$state)),
@@ -25,32 +28,29 @@ ui <- fluidPage(
   h3("2. What is consumption of different dairy products per capita from 1975 to 2017"),
   fluidRow(
     selectInput("consumption",
-                "select Product:",
+                "Select Product:",
                 choices = unique(mydata2$Product_Type)),
     mainPanel(
       plotlyOutput("plot2")
-    )
-  ),
-
-  fluidRow(
-    column(10,
-           div(class = "about",
-               uiOutput('about'))
     )
   ),
   includeCSS("styles.css")
 
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+  observeEvent(input$productionRegion,
+               updateSelectInput(session,
+                                 "production",
+                                 choices = mydata1$state[mydata1$region == input$productionRegion]))
   output$plot1 <- renderPlotly({
     production_plot <- mydata1 %>%
       filter(state == input$production)
 
-    p <- ggplot(production_plot, aes(year, milk_produced)) +
+    p <- ggplot(production_plot, aes(year, milk_produced/1000000)) +
       geom_col(stat = 'identity') +
       theme_bw(base_size = 14) +
-      labs(x = "Year", y = "Milk Production") +
+      labs(x = "Year", y = "Milk Production (million lbs)") +
       scale_x_continuous(
         breaks = seq(min(production_plot$year),
                      max(production_plot$year), by=1)) +
@@ -68,7 +68,7 @@ server <- function(input, output) {
     p1 <- ggplot(consumption_plot, aes(year, Consumption)) +
       geom_col(stat = 'identity') +
       theme_bw(base_size = 14) +
-      labs(x = "Year", y = "Dairy Products Consumption") +
+      labs(x = "Year", y = "Consumption (lbs per person)") +
       scale_x_continuous(
         breaks = seq(min(consumption_plot$year),
                      max(consumption_plot$year), by=1)) +
