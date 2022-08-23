@@ -24,10 +24,6 @@ details > summary:first-of-type {
 }
 
 
-body {
-  background-color: darkgrey;
-}
-
 h2 {
   color: brown;
   font-size: 2.5em;
@@ -35,6 +31,5 @@ h2 {
 }
 
 div {
-  color: black;
   font-weight: bold;
 }

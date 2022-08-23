@@ -6,7 +6,7 @@ variousregions and states of United States from 1970 to 2017
 and consumption of different dairy products from 1975 to 2017 
 (in pounds per person) in United States.
 
-The data source is from **tidytuesday (2019)** 
+The data source is from **USDA (United States Department of Agriculture)** 
 
 
 
@@ -14,11 +14,14 @@ The data source is from **tidytuesday (2019)**
 
 The purpose of the app is to:
 
-1. show the comparison between milk production statistics and dairy products consumption over the period,
-2. show how the use of **plotly** function in plots make visualization of the data much more striking and easy to interpret, and 
-3. help the user to look at the data, understand the data and visualize the data for each year and make a decision accordingly.
+1. show the comparison between milk production statistics, fluid milk sales/consumption and dairy products consumption over the period of time, 
+2. show how the use of **plotly** function in plots make visualization of the data much more striking and easy to interpret, 
+3. compare the total milk production and total fluid milk consumption/sales of different kinds so that once can know what proportion of each type of milk was directly consumed and what proportion of each type was used to make other other dairy products.
+4. help the user to look at the data, understand the data and visualize the data for each year.
 
-The data showed that there was not much increase or decrease in milk production in different regions but there were some specific dairy products which showed increase and decrease in their consumption over the time and the column graph is showing this trend very clearly including values as well.
+The data showed that there was not much increase or decrease in milk production in different regions but there were some specific dairy products which showed increase and decrease in their consumption over the time and the column graph is showing this trend very clearly including values as well. 
+The plots also show that the milk production is increasing continuously from 1970 to 2017 but the fluid consumption for some categories of milk is decreasing which means the larger proportion of that type of milk is being used in manufacturing other dairy products.
+
 #### Creator
 
 Harsh Katiyar (hkat0008@student.monash.edu)
